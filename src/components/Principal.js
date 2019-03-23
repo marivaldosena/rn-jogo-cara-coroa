@@ -20,7 +20,12 @@ export default class Principal extends React.Component {
       <View style={principal}>
         <View style={apresentacao}>
           <Image source={Logo} />
-          <Image source={btnJogarImage} />
+
+          <TouchableHighlight
+            onPress={() => Actions.resultado()}
+          >
+            <Image source={btnJogarImage} />
+          </TouchableHighlight>
         </View>
         <View style={rodape}>
           <TouchableHighlight
