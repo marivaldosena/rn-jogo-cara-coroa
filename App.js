@@ -8,7 +8,7 @@ import OutrosJogos from './src/components/OutrosJogos';
 export default class App extends React.Component {
   render() {
     return (
-      <Router >
+      <Router>
         <Stack key='root' headerLayoutPreset='center'>
           <Scene key='principal' component={Principal} initial title='Cara ou Coroa' />
           <Scene key='sobrejogo' component={SobreJogo} title='Sobre o Jogo' />

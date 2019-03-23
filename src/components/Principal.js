@@ -2,8 +2,10 @@ import React from 'react';
 import {
   StyleSheet,
   Image,
-  View
+  View,
+  TouchableHighlight
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 import Logo from '../images/logo.png';
 import btnJogarImage from '../images/botao_jogar.png';
@@ -21,8 +23,16 @@ export default class Principal extends React.Component {
           <Image source={btnJogarImage} />
         </View>
         <View style={rodape}>
-          <Image source={btnSobreJogoImage} />
-          <Image source={btnOutrosJogosImage} />
+          <TouchableHighlight
+            onPress={() => Actions.sobrejogo()}
+          >
+            <Image source={btnSobreJogoImage} />
+          </TouchableHighlight>
+          <TouchableHighlight
+            onPress={() => Actions.outrosjogos()}
+          >
+            <Image source={btnOutrosJogosImage} />
+          </TouchableHighlight>
         </View>
       </View>
     );
